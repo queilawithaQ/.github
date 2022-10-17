@@ -72,7 +72,7 @@ jobs:
 
       - name: Create pull request
         if: ${{ steps.detect_changes.outputs.pull_request == 'true' }}
-        uses: peter-evans/create-pull-request@dcd5fd746d53dd8de555c0f10bca6c35628be47a
+        uses: peter-evans/create-pull-request@ad43dccb4d726ca8514126628bec209b8354b6dd
         with:
           path: vendor/${{ matrix.repo }}
           token: ${{ secrets.HOMEBREW_DOTGITHUB_WORKFLOW_TOKEN }}
